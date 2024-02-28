@@ -12,7 +12,8 @@ const ChatProvider = ({ children }) => {
 
   // console.log(process.env.BACKEND_URL)
   // let socket = io(`${process.env.BACKEND_URL}`)
-  let socket = io("http://localhost:3000")
+  // let socket = io("http://localhost:3000")
+  let socket = io("https://realtime-chatify-6065.onrender.com")
 
   const [onlineUsers, setOnlineUsers] = useState([]);
   const [selectedChat, setSelectedChat] = useState();
