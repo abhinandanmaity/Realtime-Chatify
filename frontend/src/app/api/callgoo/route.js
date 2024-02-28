@@ -12,8 +12,8 @@ export async function GET(req, res) {
         await connectDb()
         let finduser = await User.find({})
 
-        console.log("finduser")
-        console.log(finduser)
+        // console.log("finduser")
+        // console.log(finduser)
 
         return NextResponse.json({ data: finduser }, { status: 200 })
     } catch (error) {
