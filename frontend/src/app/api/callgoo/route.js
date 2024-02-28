@@ -2,13 +2,15 @@
 // import { Server } from "socket.io";
 import User from "@/models/User";
 import { NextResponse } from "next/server";
+import { connectDb } from "@/lib/connectDB";
 
 
-export async function POST(req, res) {
+export async function GET(req, res) {
 
     try {
 
-        let finduser = await User.find()
+        await connectDb()
+        let finduser = await User.find({})
 
         console.log("finduser")
         console.log(finduser)
