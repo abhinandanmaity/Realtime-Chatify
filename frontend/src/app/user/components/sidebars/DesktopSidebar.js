@@ -174,7 +174,7 @@ const DesktopSidebar = () => {
                         // fullWidth
                         // variant="contained"
                         // sx={{ mt: 2, mb: 0 }}
-                        className='text-xs lmd:text-sm bg-cyan-700 text-white hover:bg-cyan-900 hover:text-white rounded-xl pl-2 pr-2 pt-1 mt-2 '
+                        className='text-xs lmd:text-sm bg-cyan-700 text-white hover:bg-cyan-900 hover:text-white rounded-xl pl-2 pr-2 pt-1 mt-4 '
                     >
                         <div className="flex flex-row">
                             <span className='pr-0.5 text-lg font-extrabold'><IoMdAdd /></span>
