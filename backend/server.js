@@ -25,11 +25,11 @@ app.use(express.json());
 const __dirname1 = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname1, "/frontend/build")));
+  // app.use(express.static(path.join(__dirname1, "/frontend/build")));
 
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
-  );
+  // app.get("*", (req, res) =>
+  //   res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
+  // );
 } else {
   app.get("/", (req, res) => {
     res.send("API is running..");
@@ -85,6 +85,7 @@ const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
     // origin: `${process.env.FRONTEND_URL}`,
+    // origin: "http://localhost:3001",
     origin: "http://localhost:3001",
     methods: ["GET", "POST"],
     credentials: true,
@@ -165,6 +166,6 @@ io.on("connection", (socket) => {
 
 
 server.listen(port, () => {
-  // console.log(`Server listening at http://localhost:${port}`)
+  console.log(`Server listening at ${port}`)
 })
 
