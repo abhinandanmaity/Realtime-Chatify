@@ -100,7 +100,7 @@ const ClientButton = () => {
             
 
             router.push("/user")
-            window.location.reload();
+            // window.location.reload();
 
             toast.success('Sign in Successfully', {
               position: "bottom-center",
