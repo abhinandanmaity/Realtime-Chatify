@@ -9,9 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 import { signIn } from "next-auth/react"
 import { useRouter } from 'next/navigation';
-import jsCookie from 'js-cookie'
-import { useSelector, useDispatch } from 'react-redux'
-import { useremail } from '@/redux/slice/user/sessionSlice';
 
 
 const ClientButton = () => {

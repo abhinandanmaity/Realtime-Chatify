@@ -3,7 +3,6 @@ import { connectDb } from "@/lib/connectDB";
 import User from "@/models/User";
 import { NextResponse } from "next/server";
 var CryptoJS = require("crypto-js");
-// var jwt = require('jsonwebtoken');
 
 
 export async function POST(req) {
