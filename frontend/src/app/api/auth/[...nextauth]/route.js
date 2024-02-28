@@ -125,9 +125,9 @@ export const authOptions = {
             }
             return session
         },
-        // redirect() {
-        //     return "/user"
-        // },
+        redirect() {
+            return "/user"
+        },
     },
     // debug: process.env.NODE_ENV === 'development',
     session: {
