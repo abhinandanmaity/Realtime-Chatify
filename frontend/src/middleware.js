@@ -20,10 +20,10 @@ export default withAuth(
         const isLoginPage = pathname.startsWith('/sign-in')
         const isSignupPage = pathname.startsWith('/sign-up')
 
-        // const sensitiveRoutes = ['/user']
-        // const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
-        //     pathname.startsWith(route)
-        // )
+        const sensitiveRoutes = ['/user']
+        const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
+            pathname.startsWith(route)
+        )
 
         // if (isLoginPage || isSignupPage) {
         //     if (isAuth) {
@@ -33,9 +33,9 @@ export default withAuth(
         //     return NextResponse.next()
         // }
 
-        // if (!isAuth && isAccessingSensitiveRoute) {
-        //     return NextResponse.redirect(new URL('/sign-in', req.url))
-        // }
+        if (!isAuth && isAccessingSensitiveRoute) {
+            return NextResponse.redirect(new URL('/sign-in', req.url))
+        }
         // if (pathname === '/' && isAuth) {
         //     return NextResponse.redirect(new URL('/user', req.url))
         // }

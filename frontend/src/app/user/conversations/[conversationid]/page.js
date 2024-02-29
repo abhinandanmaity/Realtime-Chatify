@@ -377,6 +377,7 @@ const Conversation = ({ params }) => {
     const handlesend = (event) => {
 
         // e.preventDefault();
+        event.preventDefault()
 
 
         // // console.log(e.key)
@@ -791,7 +792,7 @@ const Conversation = ({ params }) => {
                                     <button
                                         type="button"
                                         className=""
-                                        // onClick={handlesend}
+                                        onClick={handlesend}
                                         onKeyDown={handlesend}
                                     >
                                         <GoPaperAirplane className="text-white text-xl font-bold" />
