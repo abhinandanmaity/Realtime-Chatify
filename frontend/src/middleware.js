@@ -25,7 +25,7 @@ export default withAuth(
             pathname.startsWith(route)
         )
 
-        if (isLoginPage || isSignupPage) {
+        if ("https://realtime-chatify-6065-abhinandan.netlify.app/sign-up" || "https://realtime-chatify-6065-abhinandan.netlify.app/sign-in") {
             if (isAuth) {
                 return NextResponse.redirect(new URL('/user', req.url))
             }
