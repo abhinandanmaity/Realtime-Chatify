@@ -53,9 +53,9 @@ const ClientButton = () => {
     dispatch(useremail());
   }
 
-  const handlesubmit = () => {
+  const handlesubmit = (e) => {
 
-    // e.preventDefault();
+    e.preventDefault();
     setIsLoadingSign(true);
 
     // let n = name == undefined ? 0 : name.length;
@@ -99,8 +99,8 @@ const ClientButton = () => {
 
 
 
-            router.refresh("/user")
-            // router.push("/user")
+            // router.refresh("/user")
+            router.push("/user")
             // window.location.reload();
 
             toast.success('Sign in Successfully', {
