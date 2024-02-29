@@ -21,9 +21,10 @@ export default withAuth(
         const isSignupPage = pathname.startsWith('/sign-up')
 
         console.log("req.nextUrl")
-        // console.log(req.nextUrl)
+        console.log(isAuth)
         console.log("----- req.nextUrl ---- ")
         console.log(req.nextUrl.pathname)
+        console.log(req.nextUrl.pathname == "/sign-in")
         const sensitiveRoutes = ['/user']
         const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
             pathname.startsWith(route)
