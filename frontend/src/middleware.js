@@ -28,23 +28,25 @@ export default withAuth(
         if ("https://realtime-chatify-6065-abhinandan.netlify.app/sign-up" || "https://realtime-chatify-6065-abhinandan.netlify.app/sign-in") {
             if (isAuth) {
                 return NextResponse.redirect(new URL('/user', req.url))
+            } else {
+
+                return NextResponse.next()
             }
 
-            return NextResponse.next()
         }
 
         // if (!isAuth && isAccessingSensitiveRoute) {
         //     return NextResponse.redirect(new URL('/sign-in', req.url))
         // }
-        if (!isAuth && req.url === "https://realtime-chatify-6065-abhinandan.netlify.app/user") {
+        if (!isAuth && "https://realtime-chatify-6065-abhinandan.netlify.app/user") {
             return NextResponse.redirect(new URL('/sign-in', req.url))
         }
-        // if (pathname === '/' && isAuth) {
-        //     return NextResponse.redirect(new URL('/user', req.url))
-        // }
-        // if (pathname === '/' && !isAuth) {
-        //     return NextResponse.redirect(new URL('/sign-in', req.url))
-        // }
+        if ("https://realtime-chatify-6065-abhinandan.netlify.app" && isAuth) {
+            return NextResponse.redirect(new URL('/user', req.url))
+        }
+        if ("https://realtime-chatify-6065-abhinandan.netlify.app" && !isAuth) {
+            return NextResponse.redirect(new URL('/sign-in', req.url))
+        }
     },
     {
         callbacks: {
