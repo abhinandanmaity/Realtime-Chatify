@@ -8,8 +8,8 @@ import { NextResponse } from 'next/server'
 
 export default withAuth(
     async function middleware(req) {
-    //     const dispatch = useDispatch()
-    // dispatch(useremail());
+        //     const dispatch = useDispatch()
+        // dispatch(useremail());
         const pathname = req.nextUrl.pathname
         // const session = await getServerSession(authOptions);
         // console.log("session ",session)
@@ -25,15 +25,18 @@ export default withAuth(
             pathname.startsWith(route)
         )
 
-        // if (isLoginPage || isSignupPage) {
-        //     if (isAuth) {
-        //         return NextResponse.redirect(new URL('/user', req.url))
-        //     }
+        if (isLoginPage || isSignupPage) {
+            if (isAuth) {
+                return NextResponse.redirect(new URL('/user', req.url))
+            }
 
-        //     return NextResponse.next()
+            return NextResponse.next()
+        }
+
+        // if (!isAuth && isAccessingSensitiveRoute) {
+        //     return NextResponse.redirect(new URL('/sign-in', req.url))
         // }
-
-        if (!isAuth && isAccessingSensitiveRoute) {
+        if (!isAuth && req.url === "https://realtime-chatify-6065-abhinandan.netlify.app/user") {
             return NextResponse.redirect(new URL('/sign-in', req.url))
         }
         // if (pathname === '/' && isAuth) {
