@@ -22,6 +22,7 @@ export default withAuth(
 
         console.log("req.nextUrl")
         console.log("----- req.nextUrl ---- ")
+        console.log(req.nextUrl)
         console.log(req.url)
         const sensitiveRoutes = ['/user']
         const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
