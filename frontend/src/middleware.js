@@ -21,34 +21,33 @@ export default withAuth(
         const isSignupPage = pathname.startsWith('/sign-up')
 
         console.log("req.nextUrl")
-        console.log(req.nextUrl)
+        // console.log(req.nextUrl)
         console.log("----- req.nextUrl ---- ")
-        console.log(req.url)
+        console.log(req.nextUrl.pathname)
         const sensitiveRoutes = ['/user']
         const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
             pathname.startsWith(route)
         )
 
-        if (req.url == "https://realtime-chatify-6065-abhinandan.netlify.app/sign-up" || req.url == "https://realtime-chatify-6065-abhinandan.netlify.app/sign-in") {
+        if (req.nextUrl.pathname == "/sign-up" || req.nextUrl.pathname == "/sign-in") {
             if (isAuth) {
                 return NextResponse.redirect(new URL('/user', req.url))
             } else {
 
                 return NextResponse.next()
             }
-
         }
 
         // if (!isAuth && isAccessingSensitiveRoute) {
         //     return NextResponse.redirect(new URL('/sign-in', req.url))
         // }
-        if (!isAuth && req.url == "https://realtime-chatify-6065-abhinandan.netlify.app/user") {
+        if (!isAuth && req.nextUrl.pathname == "/user") {
             return NextResponse.redirect(new URL('/sign-in', req.url))
         }
-        if (req.url == "https://realtime-chatify-6065-abhinandan.netlify.app" && isAuth) {
+        if (req.nextUrl.pathname == "/" && isAuth) {
             return NextResponse.redirect(new URL('/user', req.url))
         }
-        if (req.url == "https://realtime-chatify-6065-abhinandan.netlify.app" && !isAuth) {
+        if (req.nextUrl.pathname == "/" && !isAuth) {
             return NextResponse.redirect(new URL('/sign-in', req.url))
         }
     },
