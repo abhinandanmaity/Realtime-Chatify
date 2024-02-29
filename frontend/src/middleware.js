@@ -52,6 +52,6 @@
 //     }
 // )
 
-// export const config = {
-//     matcher: ["/", "/sign-in", "/sign-up", "/user", "/user/conversations/:path*"]
-// }
+export const config = {
+    matcher: ["/", "/sign-in", "/sign-up", "/user", "/user/conversations/:path*"]
+}
