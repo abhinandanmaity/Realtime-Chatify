@@ -19,6 +19,7 @@ export default withAuth(
         // Manage route protection
         const secret = process.env.NEXTAUTH_SECRET;
         // const isAuth = await getToken({ req: req })
+        const isAuth_ = await getToken({ req: req});
         const isAuth = await getToken({ req: req, secret: secret });
         // console.log(isAuth?.email)
         const isLoginPage = pathname.startsWith('/sign-in')
@@ -37,6 +38,7 @@ export default withAuth(
         console.log(req.cookies?.get('__Secure-next-auth.session-token')?.value)
         // const isAuth = jwt?.verify(req.cookies?.get('__Secure-next-auth.session-token')?.value, secret)
         console.log(isAuth)
+        console.log(isAuth_)
         console.log(secret)
 
         // const decode = authOptions?.decode;

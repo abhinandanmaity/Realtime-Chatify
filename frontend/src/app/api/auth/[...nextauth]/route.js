@@ -66,6 +66,7 @@ export const authOptions = {
             }
         })
     ],
+    secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
         async signIn({ user, account }) {
 
@@ -113,6 +114,7 @@ export const authOptions = {
                 token.name = user.name;
                 token.email = user.email;
                 token.image = user.image;
+                return token;
             }
             return token;
 
@@ -137,7 +139,7 @@ export const authOptions = {
     session: {
         strategy: "jwt",
     },
-    secret: process.env.NEXTAUTH_SECRET,
+
     pages: {
         signIn: "/sign-in"
     }
