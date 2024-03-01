@@ -2,7 +2,7 @@
 import { getToken } from 'next-auth/jwt'
 import { withAuth } from 'next-auth/middleware'
 import { NextResponse } from 'next/server'
-const jwt = require('jsonwebtoken')
+var jwt = require('jsonwebtoken')
 // import { useDispatch } from 'react-redux'
 // import { useremail } from '@/redux/slice/user/sessionSlice';
 // import { authOptions } from './app/api/auth/[...nextauth]/route'
@@ -33,8 +33,8 @@ export default withAuth(
         // console.log(req.cookies)
         console.log(" ---- req.cookies ---- ")
         console.log(req.cookies.get('__Secure-next-auth.session-token').value)
-        const isAuth = jwt.verify(req.cookies.get('__Secure-next-auth.session-token').value, secret)
-        console.log(isAuth)
+        // const isAuth = jwt.verify(req.cookies.get('__Secure-next-auth.session-token').value, secret)
+        // console.log(isAuth)
         // console.log(req.nextUrl.pathname == "/sign-in")
         const sensitiveRoutes = ['/user']
         const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
