@@ -32,8 +32,8 @@ export default withAuth(
         // console.log(isAuth_)
         // console.log(req.cookies)
         console.log(" ---- req.cookies ---- ")
-        console.log(req.cookies.get('__Secure-next-auth.session-token')?.value)
-        const isAuth = jwt.verify(req.cookies.get('__Secure-next-auth.session-token')?.value, secret)
+        console.log(req.cookies?.get('__Secure-next-auth.session-token')?.value)
+        const isAuth = jwt?.verify(req.cookies?.get('__Secure-next-auth.session-token')?.value, secret)
         console.log(isAuth)
         // console.log(req.nextUrl.pathname == "/sign-in")
         const sensitiveRoutes = ['/user']
