@@ -26,12 +26,6 @@ export async function POST(req) {
 
         let user = new User({ name, username, email, password: CryptoJS.AES.encrypt(password, process.env.CRYPTO_SECRET_KEY).toString() });
 
-
-        // let token = jwt.sign({ image: user.image, email: user.email }, process.env.JWT_SECRET_KEY, { expiresIn: '25d' });
-
-        // user.resetToken = token
-        // user.expireToken = Date.now() + 2160000000
-
         await user.save();
 
         return NextResponse.json({ success: "success" }, { status: 200 })

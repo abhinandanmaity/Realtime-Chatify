@@ -15,27 +15,53 @@ export async function POST(req) {
         const body = await req.json();
         const { username } = body;
 
-        console.log("n -- session.user.email =-- ")
-        console.log(session.user.email)
-        // // console.log(body.name)
+        // console.log("n -- session.user.email =-- ")
+        // console.log(session.user.email)
+        // console.log(username)
+        // console.log(session.user.email)
 
         let finduser_ = await User.findOne({ username: username })
-        if (!finduser_) {
+        let finduser = await User.findOne({ email: session.user.email })
+        if (!finduser_ || !finduser) {
             return NextResponse.json({ error: "User Not Exist !" }, { status: 400 })
         }
-        let findfriend = await Friend.findOne({ sender: session.user.email, receiver: finduser_.email })
-        let findfriend_ = await Friend.findOne({ sender: finduser_.email, receiver: session.user.email })
-        console.log(findfriend)
-        console.log(findfriend_)
+
+        // console.log("finduser_")
+        // console.log(finduser)
+        // console.log(finduser_)
+        let findfriend = await Friend.findOne({ sender: finduser.email, receiver: finduser_.email })
+        let findfriend_ = await Friend.findOne({ sender: finduser_.email, receiver: finduser.email })
+        // let findfriend = await Friend.findOne({ sender: "abhinandanmaity222@gmail.com", receiver: finduser_.email })
+        // let findfriend_ = await Friend.findOne({ sender: finduser_.email, receiver: "abhinandanmaity222@gmail.com" })
+
         if (findfriend || findfriend_) {
             return NextResponse.json({ error: "Already Your Friend" }, { status: 400 })
         }
 
-        let friend = new Friend({ sender: session.user.email, sendername: session.user.name, senderimage: session.user.image, receiver: finduser_.email, friend: false, request: true });
+        // console.log(findfriend)
+        // console.log(findfriend_)
+        if (finduser.image) {
+            // console.log("--- hot hot --- ")
+            let friend = new Friend({ sender: finduser.email, sendername: finduser.name, senderimage: finduser.image, receiver: finduser_.email, friend: false, request: true });
+            // let friend = new Friend({ sender: "abhinandanmaity222@gmail.com", sendername: "session.user.name", senderimage: "session.user.image", receiver: finduser_.email, friend: false, request: true });
+            // console.log("friend")
+            // console.log(friend)
+            await friend.save();
+        } else {
 
-        await friend.save();
+            // console.log("hot hot")
+            let friend = new Friend({ sender: finduser.email, sendername: finduser.name, receiver: finduser_.email, friend: false, request: true });
+            // let friend = new Friend({ sender: "abhinandanmaity222@gmail.com", sendername: "session.user.name", senderimage: "session.user.image", receiver: finduser_.email, friend: false, request: true });
+            // console.log("friend")
+            // console.log(friend)
+            await friend.save();
+            // console.log("friend")
+        }
+
+        // console.log("friend")
 
         return NextResponse.json({ success: "success" }, { status: 200 })
+
     } catch (error) {
 
         return NextResponse.json({ error: "Invalid request type !" }, { status: 400 })

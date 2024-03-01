@@ -37,6 +37,7 @@ export default withAuth(
         // console.log(" ---- req.cookies ---- ")
         // console.log(req.cookies?.get('__Secure-next-auth.session-token')?.value)
         const isAuth = req.cookies?.get('__Secure-next-auth.session-token')?.value
+        // const isAuth = true
         // const isAuth = jwt?.verify(req.cookies?.get('__Secure-next-auth.session-token')?.value, secret)
         // console.log(isAuth)
         // // console.log(isAuth_)

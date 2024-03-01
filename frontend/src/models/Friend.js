@@ -5,19 +5,19 @@ const FriendSchema = new mongoose.Schema({
 
     sender: {
         type: String,
-        required: true,
+        // required: true,
     },
     sendername: {
         type: String,
-        required: true,
+        // required: true,
     },
     senderimage: {
         type: String,
-        required: true,
+        // required: true,
     },
     receiver: {
         type: String,
-        required: true,
+        // required: true,
     },
     friend: {
         type: Boolean,
