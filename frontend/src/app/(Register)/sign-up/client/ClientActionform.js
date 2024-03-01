@@ -28,7 +28,7 @@ const ClientButton = () => {
     if (e.target.name == 'name') {
       setName(e.target.value);
     }
-    else if (e.target.name == 'username'){
+    else if (e.target.name == 'username') {
       setUsername(e.target.value);
     }
     else if (e.target.name == 'email') {
@@ -111,8 +111,8 @@ const ClientButton = () => {
                   // jsCookie.get('next-auth.session-token')
 
                   router.push("/user")
-                  window.location.reload();
-                  
+                  // window.location.reload();
+
                   toast.success('Sign Up Successfully', {
                     position: "bottom-center",
                     autoClose: 941,
@@ -244,7 +244,7 @@ const ClientButton = () => {
           // dispatch(useremail());
 
           router.push("/user")
-          window.location.reload();
+          // window.location.reload();
         }
       })
       .finally(() => setIsLoading(false));

@@ -12,18 +12,18 @@ export default withAuth(
     async function middleware(req) {
         //     const dispatch = useDispatch()
         // dispatch(useremail());
-        const pathname = req.nextUrl.pathname
+        // const pathname = req.nextUrl.pathname
         // const session = await getServerSession(authOptions);
         // console.log("session ",session)
 
         // Manage route protection
-        const secret = process.env.NEXTAUTH_SECRET;
+        // const secret = process.env.NEXTAUTH_SECRET;
         // const isAuth = await getToken({ req: req })
         // const isAuth_ = await getToken({ req: req });
         // const isAuth = await getToken({ req: req, secret: secret });
         // console.log(isAuth?.email)
-        const isLoginPage = pathname.startsWith('/sign-in')
-        const isSignupPage = pathname.startsWith('/sign-up')
+        // const isLoginPage = pathname.startsWith('/sign-in')
+        // const isSignupPage = pathname.startsWith('/sign-up')
 
         // console.log("req.nextUrl")
         // console.log(isAuth)
@@ -34,22 +34,22 @@ export default withAuth(
         // console.log("---- isAuth_ ---- ")
         // console.log(isAuth_)
         // console.log(req.cookies)
-        console.log(" ---- req.cookies ---- ")
-        console.log(req.cookies?.get('__Secure-next-auth.session-token')?.value)
-        const isAuth = req.cookies?.get('__Secure-next-auth.session-token')?.value 
+        // console.log(" ---- req.cookies ---- ")
+        // console.log(req.cookies?.get('__Secure-next-auth.session-token')?.value)
+        const isAuth = req.cookies?.get('__Secure-next-auth.session-token')?.value
         // const isAuth = jwt?.verify(req.cookies?.get('__Secure-next-auth.session-token')?.value, secret)
-        console.log(isAuth)
-        // console.log(isAuth_)
-        console.log(secret)
+        // console.log(isAuth)
+        // // console.log(isAuth_)
+        // console.log(secret)
 
         // const decode = authOptions?.decode;
         // console.log(decode)
 
         // console.log(req.nextUrl.pathname == "/sign-in")
-        const sensitiveRoutes = ['/user']
-        const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
-            pathname.startsWith(route)
-        )
+        // const sensitiveRoutes = ['/user']
+        // const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
+        //     pathname.startsWith(route)
+        // )
 
         if (req.nextUrl.pathname == "/sign-up" || req.nextUrl.pathname == "/sign-in") {
             if (isAuth) {

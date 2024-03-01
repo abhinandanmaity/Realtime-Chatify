@@ -161,7 +161,7 @@ const ClientButton = () => {
 
           if (callback.ok && !callback.error) {
             router.push("/user")
-            window.location.reload();
+            // window.location.reload();
             // dispatch(useremail());
           }
         }
