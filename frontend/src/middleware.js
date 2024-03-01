@@ -24,7 +24,7 @@ export default withAuth(
         console.log("req.nextUrl")
         console.log(isAuth)
         console.log("----- req.nextUrl ---- ")
-        console.log(req)
+        console.log(req.nextauth)
         // console.log(req.nextUrl.pathname == "/sign-in")
         const sensitiveRoutes = ['/user']
         const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
