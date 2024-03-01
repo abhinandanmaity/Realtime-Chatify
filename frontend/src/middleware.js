@@ -37,8 +37,8 @@ export default withAuth(
         // const isAuth = jwt?.verify(req.cookies?.get('__Secure-next-auth.session-token')?.value, secret)
         // console.log(isAuth)
 
-        const decode = authOptions?.decode;
-        console.log(decode)
+        // const decode = authOptions?.decode;
+        // console.log(decode)
 
         // console.log(req.nextUrl.pathname == "/sign-in")
         const sensitiveRoutes = ['/user']
