@@ -2,8 +2,8 @@
 import { getToken } from 'next-auth/jwt'
 import { withAuth } from 'next-auth/middleware'
 import { NextResponse } from 'next/server'
-var jwt = require('jsonwebtoken')
-import { authOptions } from './app/api/auth/[...nextauth]/route'
+// var jwt = require('jsonwebtoken')
+// import { authOptions } from './app/api/auth/[...nextauth]/route'
 // import { useDispatch } from 'react-redux'
 // import { useremail } from '@/redux/slice/user/sessionSlice';
 // import { authOptions } from './app/api/auth/[...nextauth]/route'

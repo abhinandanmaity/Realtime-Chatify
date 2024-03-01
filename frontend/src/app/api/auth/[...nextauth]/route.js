@@ -117,9 +117,9 @@ export const authOptions = {
             return token;
 
         },
-        async decode({ secret, token }) {
-            return jwt.verify(token, secret)
-        },
+        // async decode({ secret, token }) {
+        //     return jwt.verify(token, secret)
+        // },
         async session({ session, token }) {
             if (token) {
 
