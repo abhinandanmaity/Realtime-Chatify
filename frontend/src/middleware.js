@@ -16,7 +16,7 @@ export default withAuth(
 
         // Manage route protection
         const isAuth = await getToken({ req })
-        // console.log(isAuth.email)
+        console.log(isAuth?.email)
         const isLoginPage = pathname.startsWith('/sign-in')
         const isSignupPage = pathname.startsWith('/sign-up')
 
@@ -54,12 +54,12 @@ export default withAuth(
     },
     {
         callbacks: {
-            // async authorized() {
-            //     return true
-            // },
-            authorized({ req, token }) {
-                if (token) return true // If there is a token, the user is authenticated
-            }
+            async authorized() {
+                return true
+            },
+            // authorized({ req, token }) {
+            //     if (token) return true // If there is a token, the user is authenticated
+            // }
         },
     }
 )
