@@ -24,11 +24,14 @@ export default withAuth(
         console.log("req.nextUrl")
         console.log(isAuth)
         console.log("----- req.nextUrl ---- ")
-        console.log(req.nextUrl?.options?.headers)
-        console.log(req.nextUrl?.cookie)
+        console.log(req.nextUrl.options)
+        console.log(req.nextUrl.cookie)
         const isAuth_ = await getToken({ req: req.nextUrl })
         console.log("---- isAuth_ ---- ")
-        console.log(isAuth_)
+        // console.log(isAuth_)
+        console.log(req.cookies)
+        console.log(" ---- req.cookies ---- ")
+        console.log(req.cookies.get('__Secure-next-auth.session-token'))
         // console.log(req.nextUrl.pathname == "/sign-in")
         const sensitiveRoutes = ['/user']
         const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
