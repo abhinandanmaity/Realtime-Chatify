@@ -18,7 +18,7 @@ export default withAuth(
 
         // Manage route protection
         const secret = process.env.NEXTAUTH_SECRET;
-        // const isAuth = await getToken({ req: req, secret: secret })
+        const isAuth = await getToken({ req: req })
         // console.log(isAuth?.email)
         const isLoginPage = pathname.startsWith('/sign-in')
         const isSignupPage = pathname.startsWith('/sign-up')
