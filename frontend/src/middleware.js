@@ -54,9 +54,12 @@ export default withAuth(
     },
     {
         callbacks: {
-            async authorized() {
-                return true
-            },
+            // async authorized() {
+            //     return true
+            // },
+            authorized({ req, token }) {
+                if (token) return true // If there is a token, the user is authenticated
+            }
         },
     }
 )

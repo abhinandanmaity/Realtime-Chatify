@@ -115,6 +115,7 @@ export const authOptions = {
                 token.image = user.image;
             }
             return token;
+            
         },
         async session({ session, token }) {
             if (token) {
