@@ -72,7 +72,7 @@ const AddFriend = () => {
 
 
     const data = {
-      username
+      username: searchInput
     };
 
     //   console.log("My data is that")
@@ -236,7 +236,7 @@ const AddFriend = () => {
                     key={item._id} onClick={() => handleSelectfriend(item)}
                   >
 
-                    <div className="mt-2 cursor-pointer ">
+                    <div className="mt-0.5 cursor-pointer ">
                       <div className=" appearance-none relative px-4 lmd:px-5 py-3 lmd:py-3.5 border-slate-500 placeholder:slate-400 text-slate-300 rounded-3xl border-2 focus:outline-none focus:ring-slate-400 focus:border-slate-400 focus:z-0 placeholder:text-sm bg-slate-700 hover:bg-slate-600 flex justify-start "
                       >
                         <div className="flex flex-row items-center pl-1.5">
