@@ -79,7 +79,7 @@ const AddFriend = () => {
     //   console.log(data)
 
 
-    if (username.length >= 1) {
+    if (searchInput.length >= 1) {
 
       axios.post(`/api/friend/send-friendrequest`, data)
         .then(() => {
