@@ -5,7 +5,7 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 var CryptoJS = require("crypto-js");
-// var jwt = require('jsonwebtoken');
+var jwt = require('jsonwebtoken');
 
 
 
@@ -115,7 +115,10 @@ export const authOptions = {
                 token.image = user.image;
             }
             return token;
-            
+
+        },
+        async decode({ secret, token }) {
+            return jwt.verify(token, secret)
         },
         async session({ session, token }) {
             if (token) {

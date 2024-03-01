@@ -3,6 +3,7 @@ import { getToken } from 'next-auth/jwt'
 import { withAuth } from 'next-auth/middleware'
 import { NextResponse } from 'next/server'
 var jwt = require('jsonwebtoken')
+import { authOptions } from './app/api/auth/[...nextauth]/route'
 // import { useDispatch } from 'react-redux'
 // import { useremail } from '@/redux/slice/user/sessionSlice';
 // import { authOptions } from './app/api/auth/[...nextauth]/route'
@@ -32,9 +33,13 @@ export default withAuth(
         // console.log(isAuth_)
         // console.log(req.cookies)
         console.log(" ---- req.cookies ---- ")
-        console.log(req.cookies?.get('__Secure-next-auth.session-token')?.value)
-        const isAuth = jwt?.verify(req.cookies?.get('__Secure-next-auth.session-token')?.value, secret)
-        console.log(isAuth)
+        // console.log(req.cookies?.get('__Secure-next-auth.session-token')?.value)
+        // const isAuth = jwt?.verify(req.cookies?.get('__Secure-next-auth.session-token')?.value, secret)
+        // console.log(isAuth)
+
+        const decode = authOptions?.decode;
+        console.log(decode)
+
         // console.log(req.nextUrl.pathname == "/sign-in")
         const sensitiveRoutes = ['/user']
         const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
@@ -65,12 +70,13 @@ export default withAuth(
     },
     {
         callbacks: {
-            async authorized() {
-                return true
-            },
+            // async authorized() {
+            //     return true
+            // },
             // authorized({ req, token }) {
             //     if (token) return true // If there is a token, the user is authenticated
             // }
+            authorized: ({ token }) => !!token,
         },
     }
 )
