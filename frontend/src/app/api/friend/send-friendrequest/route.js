@@ -15,7 +15,8 @@ export async function POST(req) {
         const body = await req.json();
         const { username } = body;
 
-        // // console.log(body)
+        console.log("n -- session.user.email =-- ")
+        console.log(session.user.email)
         // // console.log(body.name)
 
         let finduser_ = await User.findOne({ username: username })
@@ -24,6 +25,8 @@ export async function POST(req) {
         }
         let findfriend = await Friend.findOne({ sender: session.user.email, receiver: finduser_.email })
         let findfriend_ = await Friend.findOne({ sender: finduser_.email, receiver: session.user.email })
+        console.log(findfriend)
+        console.log(findfriend_)
         if (findfriend || findfriend_) {
             return NextResponse.json({ error: "Already Your Friend" }, { status: 400 })
         }

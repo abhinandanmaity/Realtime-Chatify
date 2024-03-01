@@ -253,7 +253,7 @@ const AddFriend = () => {
                           <div className="flex flex-col justify-start pl-2">
 
                             <div className="text-xs lmd:text-sm pl-3 text-white">{item.name}</div>
-                            <div className="text-xxs lmd:text-sm pl-3 text-white">{item.username}</div>
+                            <div className="text-xxs lmd:text-xs pl-3 text-white">{item.username}</div>
                           </div>
                         </div>
                         <div className="flex flex-row items-center">
