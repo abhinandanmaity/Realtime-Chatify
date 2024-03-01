@@ -37,8 +37,8 @@ export default withAuth(
         // const isAuth = jwt?.verify(req.cookies?.get('__Secure-next-auth.session-token')?.value, secret)
         // console.log(isAuth)
 
-        // const decode = authOptions?.decode;
-        // console.log(decode)
+        const decode = authOptions?.decode;
+        console.log(decode)
 
         // console.log(req.nextUrl.pathname == "/sign-in")
         const sensitiveRoutes = ['/user']
@@ -70,13 +70,13 @@ export default withAuth(
     },
     {
         callbacks: {
-            // async authorized() {
-            //     return true
-            // },
+            async authorized() {
+                return true
+            },
             // authorized({ req, token }) {
             //     if (token) return true // If there is a token, the user is authenticated
             // }
-            authorized: ({ token }) => !!token,
+            // authorized: ({ token }) => !!token,
         },
     }
 )
