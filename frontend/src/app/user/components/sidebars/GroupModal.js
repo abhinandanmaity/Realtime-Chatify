@@ -242,8 +242,8 @@ const GroupModal = ({ isOpen, setIsOpen }) => {
         e.preventDefault()
         setIsbtnLoading(true)
 
-        if(!groupname || groupname.length <= 0){
-            
+        if (!groupname || groupname.length <= 0) {
+
             toast.error('At first fill input', {
                 position: "bottom-center",
                 autoClose: 941,
@@ -253,6 +253,8 @@ const GroupModal = ({ isOpen, setIsOpen }) => {
                 draggable: true,
                 progress: undefined,
             });
+            onClose()
+            setIsbtnLoading(false)
             return;
         }
         const data = {
@@ -287,7 +289,7 @@ const GroupModal = ({ isOpen, setIsOpen }) => {
                     progress: undefined,
                 });
             })
-            .finally(()=>setIsbtnLoading(false))
+            .finally(() => setIsbtnLoading(false))
     }
 
     // const handlegetfriends = (e) => {
@@ -535,9 +537,9 @@ const GroupModal = ({ isOpen, setIsOpen }) => {
                             className='w-full bg-cyan-900 text-white rounded-2xl py-1 lmd:py-2 item-center cursor-not-allowed'
                             onClick={createGroup}
                         >
-                            <Box sx={{  }}>
-                                    <CircularProgress className='font-extrabold' size={20} />
-                                </Box>
+                            <Box sx={{}}>
+                                <CircularProgress className='font-extrabold' size={20} />
+                            </Box>
                         </button> : <button
                             // disabled={isLoading}
                             // type="submit"
