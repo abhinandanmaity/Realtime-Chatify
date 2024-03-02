@@ -5,7 +5,7 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 var CryptoJS = require("crypto-js");
-var jwt = require('jsonwebtoken');
+// var jwt = require('jsonwebtoken');
 
 
 
@@ -66,7 +66,7 @@ export const authOptions = {
             }
         })
     ],
-    secret: process.env.NEXTAUTH_SECRET,
+
     callbacks: {
         async signIn({ user, account }) {
 
@@ -86,10 +86,10 @@ export const authOptions = {
                 let usern = removespace.toLowerCase()
                 let newuser = usern + "_";
                 newuser = newuser + rand;
-                // // console.log(newuser)
                 // // console.log(account)
 
                 let finduser = await User.findOne({ email: email, password: 'google', username: newuser })
+                console.log(finduser)
                 if (finduser) {
                     return finduser;
                 }
@@ -98,7 +98,7 @@ export const authOptions = {
                 await use.save();
                 // // console.log(email)
 
-                return user;
+                return use;
             }
 
             let us = await User.findOne({ email: user.email })
@@ -139,7 +139,7 @@ export const authOptions = {
     session: {
         strategy: "jwt",
     },
-
+    secret: process.env.NEXTAUTH_SECRET,
     pages: {
         signIn: "/sign-in"
     }
