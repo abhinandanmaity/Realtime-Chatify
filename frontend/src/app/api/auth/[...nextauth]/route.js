@@ -88,10 +88,11 @@ export const authOptions = {
                 newuser = newuser + rand;
                 // // console.log(account)
 
-                let finduser = await User.findOne({ email: email, password: 'google', username: newuser })
-                console.log(finduser)
+                let finduser = await User.findOne({ email: email, password: 'google' })
+                // console.log(finduser)
                 if (finduser) {
                     return finduser;
+                    // return true
                 }
                 // // console.log(name)
                 let use = new User({ name, username: newuser, email, image, password: 'google' });
@@ -99,6 +100,7 @@ export const authOptions = {
                 // // console.log(email)
 
                 return use;
+                // return true
             }
 
             let us = await User.findOne({ email: user.email })

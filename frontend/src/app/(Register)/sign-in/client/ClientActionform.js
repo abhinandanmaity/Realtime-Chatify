@@ -141,6 +141,7 @@ const ClientButton = () => {
     // throw new Error("does not matter")
     signIn('google', { redirect: false })
       .then((callback) => {
+        // console.log("callback")
         // console.log(callback)
         // console.log(callback.error)
         // console.log(callback.ok)

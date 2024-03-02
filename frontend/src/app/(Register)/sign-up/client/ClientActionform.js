@@ -224,6 +224,7 @@ const ClientButton = () => {
     signIn('google', { redirect: false })
       .then((callback) => {
 
+        // console.log("callback")
         // console.log(callback)
         // console.log(callback.ok)
 

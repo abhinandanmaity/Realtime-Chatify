@@ -18,7 +18,7 @@ export default withAuth(
 
         // Manage route protection
         // const secret = process.env.NEXTAUTH_SECRET;
-        // const isAuth = await getToken({ req: req })
+        // const isAuth = await getToken({ req })
         // const isAuth_ = await getToken({ req: req });
         // const isAuth = await getToken({ req: req, secret: secret });
         // console.log(isAuth?.email)
@@ -36,7 +36,9 @@ export default withAuth(
         // console.log(req.cookies)
         // console.log(" ---- req.cookies ---- ")
         // console.log(req.cookies?.get('__Secure-next-auth.session-token')?.value)
+
         const isAuth = req.cookies?.get('__Secure-next-auth.session-token')?.value
+
         // const isAuth = true
         // const isAuth = jwt?.verify(req.cookies?.get('__Secure-next-auth.session-token')?.value, secret)
         // console.log(isAuth)
