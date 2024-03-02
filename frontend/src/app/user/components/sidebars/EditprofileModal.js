@@ -297,7 +297,7 @@ const EditprofileModal = ({ isOpen, onClose, image }) => {
 
                                     {(!profile || profile == "") && <Button component="label"
                                         className="bg-cyan-600 hover:bg-cyan-700 text-xs pt-1 pb-1 pl-3 pr-3 rounded-2xl
-                                    shadow-xl"
+                                    shadow-xl text-white"
                                     // sx={{
                                     //     width: 20,
                                     //     height: 30,
