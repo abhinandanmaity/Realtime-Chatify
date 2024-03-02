@@ -10,9 +10,9 @@ import ChatProvider from "./Provider/ChatProvider";
 export const metadata = {
   title: "Realtime - Chatify",
   description: "you can communicate with your friend",
-  icons: {
-    icon: '/images.jpeg', // /public path
-  },
+  // icons: {
+  //   icon: '/images.jpeg', // /public path
+  // },
 };
 
 export default function RootLayout({ children }) {

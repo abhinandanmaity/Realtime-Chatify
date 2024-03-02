@@ -27,7 +27,7 @@ const signup = () => {
         }}
       >
         <Avatar sx={{ m: 0, bgcolor: 'secondary.main' }}
-        src='/images.jpeg'
+          src='/favicon.ico'
         >
           {/* <LockOutlinedIcon /> */}
           {/* <TbMessageCircle2Filled className='text-xl text-sky-500'/> */}
@@ -50,7 +50,7 @@ const signup = () => {
           <Grid container>
             <Grid item>
               Already have an account?
-              <Link href="/sign-in" className='text-cyan-500 font-semibold' >
+              <Link href={`/sign-in`} className='text-cyan-500 font-semibold' >
                 {"  Sign in"}
               </Link>
             </Grid>
