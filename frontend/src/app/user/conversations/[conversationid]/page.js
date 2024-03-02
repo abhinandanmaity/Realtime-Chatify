@@ -770,7 +770,7 @@ const Conversation = ({ params }) => {
     return (
         <div>
             <div className="md:pl-80 lmd:pl-85">
-                <div className="h-full flex flex-col">
+                <div className="h-screen flex flex-col">
                     <Header
                         conversationid={params.conversationid}
                         user={friend}
