@@ -42,7 +42,7 @@ const signup = () => {
           </div>
         </Typography>
         <Box
-          className='text-slate-400 text-sm pt-9 container w-1/2'
+          className='text-slate-400 text-sm pt-9 w-full lmd:container lmd:w-1/2 '
         >
 
           <ClientButton >  </ClientButton>
