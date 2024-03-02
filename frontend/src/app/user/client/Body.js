@@ -16,7 +16,7 @@ const Body = ({ messages, mychat_id }) => {
                     mychat_id={mychat_id}
                 />
                 {/* ))} */}
-                <div className="pt-9"
+                <div className="pt-5"
 
                 />
             </div>
