@@ -253,6 +253,7 @@ const GroupModal = ({ isOpen, setIsOpen }) => {
                 draggable: true,
                 progress: undefined,
             });
+            return;
         }
         const data = {
             isGroupChat: true,

@@ -377,7 +377,7 @@ const Conversation = ({ params }) => {
     const handlesend = (event) => {
 
         // e.preventDefault();
-        event.preventDefault()
+        // event.preventDefault()
 
 
         // // console.log(e.key)
@@ -521,7 +521,7 @@ const Conversation = ({ params }) => {
 
     const handlesend_ = (e) => {
 
-        e.preventDefault();
+        e.preventDefault()
         // event.preventDefault()
 
 
