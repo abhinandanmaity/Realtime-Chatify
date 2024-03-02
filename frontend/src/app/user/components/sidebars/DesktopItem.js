@@ -148,7 +148,7 @@ const DesktopItem = ({ params }) => {
 
                                         <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-white">{item && item._doc.length > 19 ? (item._doc.name).slice(0, 17) + " ..." : item._doc.name}</div>
                                         {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                        {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
+                                        {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
                                             <MdAttachment className="text-white text-lg " />
                                         </div> attachment</div>}
                                     </div>
@@ -184,8 +184,8 @@ const DesktopItem = ({ params }) => {
 
                                                 <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-black">{item && item._doc.length > 19 ? (item._doc.name).slice(0, 17) + " ..." : item._doc.name}</div>
                                                 {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
-                                                    <MdAttachment className="text-white text-lg" />
+                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
+                                                    <MdAttachment className="text-black text-lg" />
                                                 </div> attachment</div>}
                                             </div>
                                         </div>
@@ -219,7 +219,7 @@ const DesktopItem = ({ params }) => {
 
                                                 <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-white">{item && item._doc.length > 19 ? (item._doc.name).slice(0, 17) + " ..." : item._doc.name}</div>
                                                 {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
+                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
                                                     <MdAttachment className="text-white text-lg" />
                                                 </div> attachment</div>}
                                             </div>
@@ -261,7 +261,7 @@ const DesktopItem = ({ params }) => {
 
                                         <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-white">{item && item._doc.length > 19 ? (item._doc.name).slice(0, 17) + " ..." : item._doc.name}</div>
                                         {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                        {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
+                                        {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
                                             <MdAttachment className="text-white text-lg" />
                                         </div> attachment</div>}
                                     </div>
@@ -297,8 +297,8 @@ const DesktopItem = ({ params }) => {
 
                                                 <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-black">{item && item._doc.length > 19 ? (item._doc.name).slice(0, 17) + " ..." : item._doc.name}</div>
                                                 {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
-                                                    <MdAttachment className="text-white text-lg" />
+                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
+                                                    <MdAttachment className="text-black text-lg" />
                                                 </div> attachment</div>}
                                             </div>
                                         </div>
@@ -332,7 +332,7 @@ const DesktopItem = ({ params }) => {
 
                                                 <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-white">{item && item._doc.length > 19 ? (item._doc.name).slice(0, 17) + " ..." : item._doc.name}</div>
                                                 {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
+                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
                                                     <MdAttachment className="text-white text-lg" />
                                                 </div> attachment</div>}
                                             </div>
@@ -376,7 +376,7 @@ const DesktopItem = ({ params }) => {
 
                                             <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-white">{item.Groupname}</div>
                                             {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                            {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
+                                            {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
                                                 <MdAttachment className="text-white  text-lg" />
                                             </div> attachment</div>}
                                         </div>
@@ -411,8 +411,8 @@ const DesktopItem = ({ params }) => {
 
                                             <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-black">{item.Groupname}</div>
                                             {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                            {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
-                                                <MdAttachment className="text-white  text-lg" />
+                                            {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
+                                                <MdAttachment className="text-black  text-lg" />
                                             </div>attachment</div>}
                                         </div>
                                     </div>
@@ -446,7 +446,7 @@ const DesktopItem = ({ params }) => {
 
                                                 <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-white">{item.Groupname}</div>
                                                 {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
+                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
                                                     <MdAttachment className="text-white text-lg" />
                                                 </div> attachment</div>}
                                             </div>
@@ -487,7 +487,7 @@ const DesktopItem = ({ params }) => {
 
                                             <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-white">{item.Groupname}</div>
                                             {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                            {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex ">
+                                            {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex ">
                                                 <div className='pr-1.5'>
                                                     <MdAttachment className="text-white text-lg" />
                                                 </div>
@@ -524,8 +524,8 @@ const DesktopItem = ({ params }) => {
 
                                             <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-black">{item.Groupname}</div>
                                             {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                            {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
-                                                <MdAttachment className="text-white  text-lg" />
+                                            {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
+                                                <MdAttachment className="text-black  text-lg" />
                                             </div>attachment</div>}
                                         </div>
                                     </div>
@@ -559,7 +559,7 @@ const DesktopItem = ({ params }) => {
 
                                                 <div className=" text-xs lmd:text-xs pl-3 pb-1.5 text-white">{item.Groupname}</div>
                                                 {(item && item.content) && <div className="text-xxs lmd:text-xs pl-3">{item.content.length > 26 ? (item.content).slice(0, 25) + " ..." : item.content}</div>}
-                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-sm pl-3 flex "><div className='pr-1.5'>
+                                                {(item && item.attachments != "" && item.content == "") && <div className="text-xs lmd:text-xs pl-3 flex "><div className='pr-1.5'>
                                                     <MdAttachment className="text-white text-lg" />
                                                 </div>attachment</div>}
                                             </div>
