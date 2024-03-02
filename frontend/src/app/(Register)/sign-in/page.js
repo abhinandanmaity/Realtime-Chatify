@@ -25,9 +25,11 @@ const signin = () => {
           // height: screen
         }}
       >
-        <Avatar sx={{ m: 0, bgcolor: 'secondary.main' }}>
+        <Avatar sx={{ m: 0, bgcolor: 'secondary.main' }}
+          src='/images.jpeg'
+        >
           {/* <LockOutlinedIcon /> */}
-          <TbMessageCircle2Filled className='text-xl text-sky-500' />
+          {/* <TbMessageCircle2Filled className='text-xl text-sky-500' /> */}
         </Avatar>
         <Typography component="h1" variant="h5" className='text-white text-lg font-semibold pt-14'>
           <div className='flex flex-col items-center gap-2'>
