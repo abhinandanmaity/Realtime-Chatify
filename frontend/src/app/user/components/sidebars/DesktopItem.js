@@ -57,6 +57,12 @@ const DesktopItem = ({ params }) => {
                 // console.log(res.data)
                 setUser(res.data.conversations)
                 setGroup(res.data.groups)
+                user.sort((a, b) => {
+                    return a.notification - b.notification;
+                })
+                group.sort((a, b) => {
+                    return a.notification - b.notification;
+                })
                 // setFetchnotification(!fetchnotification)
                 if (fetchnotification == "notnotification") {
 
@@ -85,6 +91,12 @@ const DesktopItem = ({ params }) => {
                 // console.log(res.data)
                 setUser(res.data.conversations)
                 setGroup(res.data.groups)
+                user.sort((a, b) => {
+                    return a.notification - b.notification;
+                })
+                group.sort((a, b) => {
+                    return a.notification - b.notification;
+                })
                 // setFetchnotification(!fetchnotification)
             })
             .catch((callback) => {
@@ -118,6 +130,13 @@ const DesktopItem = ({ params }) => {
         // console.log(filteredNames)
         setGroup_search(filteredNames_group)
         // setFriends(filteredNames)
+
+        group_search.sort((a, b) => {
+            return a.notification - b.notification;
+        })
+        user_search.sort((a, b) => {
+            return a.notification - b.notification;
+        })
     };
 
     useEffect(() => {
